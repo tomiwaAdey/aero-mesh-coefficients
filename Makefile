@@ -53,6 +53,7 @@ summarize:
 
 paper-figures:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) scripts/generate_paper_diagrams.py
+	PYTHONPATH=$(PYTHONPATH) $(PYTHON) scripts/generate_research_overview.py
 
 paper:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) scripts/build_paper.py
