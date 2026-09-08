@@ -4,6 +4,8 @@ Paper and reference implementation by **Tomiwa Adey**, University of Bristol. Re
 
 [Read the paper](paper/learning-aerodynamic-mesh-semantics.pdf) · [Publication page](https://www.tomiwaadey.com/publications/learning-aerodynamic-mesh-semantics)
 
+[![From triangulated lifting-surface geometry to aerodynamic coefficients](paper/figures/geometry-to-coefficients-overview.png)](https://www.tomiwaadey.com/publications/learning-aerodynamic-mesh-semantics)
+
 ## Abstract
 
 This study presents a method for converting an unstructured triangulated lifting surface into a structured aerodynamic lattice from which aerodynamic coefficients can be calculated. The input geometry does not identify its leading edge, trailing edge, tips or camber surface. It is therefore repaired, placed in a consistent frame, and represented by 19 local geometrical and topological quantities for each edge. Classical classifiers assign one of four aerodynamic meanings to every edge. Connected boundary paths are then recovered, the upper and lower surfaces are paired, and a quadrilateral vortex lattice is constructed.
