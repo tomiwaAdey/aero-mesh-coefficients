@@ -1,0 +1,11 @@
+{
+  "case": "cranked_s13_0096__structured_alternating__coarse",
+  "family": "cranked",
+  "dataset_seed": 13,
+  "classifier": "svm_rbf",
+  "model_sha256": "7b8ad361a37f9708fcbcfac539190b8ccac522e4be1de6fc9098479ebbd14721",
+  "geometry_sha256": "b5d3207a952dba6db5241c9bc257bcdcb9527b5afe5c2f8b616c48dc7f6169f4",
+  "prediction_sha256": "f0693a3d2fae1753992781c72e60bf6f175f5f701fd4ea84e13ae60ac98f6889",
+  "lattice_sha256": "ec26cc212d5e2df2b66c3974c193d2a5c2e34045a0f47a43616f94f9fb697ad4",
+  "figure_sha256": "430a026cf52a8a4c01236951eb85fcbac52521b848b5110a6fefbaee355f3cde"
+}

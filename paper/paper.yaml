@@ -1,0 +1,20 @@
+title: Learning Aerodynamic Mesh Semantics from Triangulated Lifting Surfaces
+author: |
+  Tomiwa Adey  
+  University of Bristol  
+  Research collaboration and supervision: Ann Gaitonde
+author-meta: Tomiwa Adey
+date: May 2013
+subject: May 2013
+lang: en-GB
+papersize: a4
+fontsize: 10pt
+geometry:
+  - top=24mm
+  - bottom=24mm
+  - left=25mm
+  - right=25mm
+colorlinks: true
+linkcolor: black
+urlcolor: MidnightBlue
+toc: false

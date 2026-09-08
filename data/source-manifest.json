@@ -1,0 +1,95 @@
+{
+  "artifacts": [
+    {
+      "id": "avl-3.32-source",
+      "kind": "scientific-software",
+      "name": "Athena Vortex Lattice 3.32",
+      "origin": "MIT Flight Vehicle Aerodynamics",
+      "release_date": "2012-12-16",
+      "url": "https://web.mit.edu/drela/Public/web/avl/avl3.32.tgz",
+      "sha256": "dcc0a6ae7ee2f5b3d6a46e730eecab1a1e2a4472a0cd3314bc7fd464f7e091f0",
+      "licence": "GNU General Public License",
+      "transformation": "Built from source in containers/avl-3.32/Dockerfile.",
+      "local_source": "vendor/avl3.32.tgz",
+      "local_output": "Docker image aero-mesh-avl:3.32"
+    },
+    {
+      "id": "gmsh-2.7.0-linux64",
+      "kind": "scientific-software",
+      "name": "Gmsh 2.7.0 Linux 64-bit",
+      "origin": "Official Gmsh distribution",
+      "release_date": "2013-03-08",
+      "url": "https://gmsh.info/bin/Linux/gmsh-2.7.0-Linux64.tgz",
+      "sha256": "f2303b791cf2e05efa6850de1eac4c70a7586dd1b19db49df133d2b7291e9a4d",
+      "licence": "GNU General Public License",
+      "transformation": "Installed unchanged in containers/gmsh-2.7.0/Dockerfile.",
+      "local_source": "vendor/gmsh-2.7.0-Linux64.tgz",
+      "local_output": "Docker image aero-mesh-gmsh:2.7.0"
+    },
+    {
+      "id": "onera-m6-section",
+      "kind": "geometry",
+      "name": "ONERA M6 ONERA-D section coordinates",
+      "origin": "NASA Glenn ONERA M6 validation archive",
+      "release_date": "1979-05-01",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/m6wing/airfoil.txt",
+      "sha256": "66b2a7bcd5a0cab274396de1c5c55d0f5cad90911a1e19ddae4e77db16834ab7",
+      "licence": "No separate licence is stated on the NASA validation-archive page.",
+      "transformation": "The symmetric section is scaled along the published untwisted swept planform and triangulated deterministically. Leading, trailing and tip annotations follow curves retained during construction.",
+      "local_source": "vendor/onera-m6/airfoil.txt",
+      "local_output": "vendor/onera-m6/onera-m6-primary.npz"
+    },
+    {
+      "id": "onera-m6-definition",
+      "kind": "geometry-documentation",
+      "name": "Schmitt and Charpin ONERA M6 geometry pages",
+      "origin": "NASA Glenn scan of the ONERA experimental report",
+      "release_date": "1979-05-01",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/m6wing/page38.pdf",
+      "sha256": "8836b7b90175032b5e5988daaf0bc14b29633d19c8d1736082cd2ed7d6575860",
+      "licence": "No separate licence is stated on the NASA validation-archive page.",
+      "transformation": "Published span, taper and sweep values are encoded by scripts/generate_onera_m6_reference.py.",
+      "local_source": "vendor/onera-m6/schmitt-charpin-page38.pdf",
+      "local_output": "vendor/onera-m6/onera-m6-primary.npz"
+    },
+    {
+      "id": "onera-m6-report-page01",
+      "kind": "geometry-documentation",
+      "name": "Schmitt and Charpin ONERA M6 report title page",
+      "origin": "NASA Glenn scan of the ONERA experimental report",
+      "release_date": "1979-05-01",
+      "url": "https://www.grc.nasa.gov/www/wind/valid/m6wing/page01.pdf",
+      "sha256": "34fa0be78d766c1e048ced09c4e1aa3ddc8605b99b4155d394449e55f0f10a27",
+      "licence": "No separate licence is stated on the NASA validation-archive page.",
+      "transformation": "Preserved without modification as source documentation.",
+      "local_source": "vendor/onera-m6/schmitt-charpin-page01.pdf",
+      "local_output": "vendor/onera-m6/schmitt-charpin-page01.pdf"
+    },
+    {
+      "id": "nasa-crm-dpw4-wing-body",
+      "kind": "geometry",
+      "name": "NASA Common Research Model DPW4 wing-body without tail",
+      "origin": "AIAA Drag Prediction Workshop 4 geometry archive",
+      "release_date": "2008-11-07",
+      "url": "https://web.archive.org/web/20090320225007id_/http://aaac.larc.nasa.gov/tsab/cfdlarc/aiaa-dpw/Workshop4/Geometry/2008-11-07/DPW4_wb_no_tail_v03.igs.gz",
+      "sha256": "5033db500c09a468b1dfb8c5e5142ea2a04e2500af459ae84c004b458b75c037",
+      "licence": "AIAA DPW public validation geometry; no separate licence is stated on the archive page.",
+      "transformation": "Decompressed, triangulated with Gmsh 2.7.0 and restricted to the published lifting-surface CAD entities. Fixed comparison annotations connect root and tip extrema with minimum-cost mesh paths biased towards the local front, rear and tip envelopes.",
+      "local_source": "vendor/nasa-crm-high-speed/DPW4_wb_no_tail_v03.igs.gz",
+      "local_output": "vendor/nasa-crm-high-speed/dpw4-crm-wing-labelled.npz"
+    },
+    {
+      "id": "nasa-crm-definition-paper",
+      "kind": "geometry-documentation",
+      "name": "Development of a Common Research Model for Applied CFD Validation Studies",
+      "origin": "AIAA Drag Prediction Workshop 4",
+      "release_date": "2008-08-18",
+      "url": "https://www.aiaa-dpw.org/Workshop4/AIAA-2008-6919-Vassberg.pdf",
+      "sha256": "82ef59b7d612d0a8a104e472b2f5db3f1023c6279fe4775a1b0a1185100e8732",
+      "licence": "Public workshop paper; copyright remains with the authors and publisher.",
+      "transformation": "Preserved without modification as source documentation.",
+      "local_source": "vendor/nasa-crm-high-speed/AIAA-2008-6919-Vassberg.pdf",
+      "local_output": "vendor/nasa-crm-high-speed/AIAA-2008-6919-Vassberg.pdf"
+    }
+  ]
+}
